@@ -5,9 +5,12 @@
     margin-left: 0;
   }
   footer {
-    ul li form {
-      input[type="text"] {
-        width: 200px;
+    ul li {
+      form {
+        overflow: visible;
+        input[type="text"] {
+          width: 160px;
+        }
       }
       input[type="submit"] {
         padding: 10px;
@@ -22,36 +25,26 @@
     grid-template-columns: 1fr;
     grid-gap: 10px;
     padding: 0;
+    form {
+      margin: 20px auto;
+    }
   }
   .slidingVertical {
     padding: 20px 0 0 0;
-    text-align: center;
+
     span {
-      margin: 0;
-      position: relative;
-      border-bottom: none;
-      animation: none;
-      display: block;
-      opacity: 1;
-      font-size: 2rem;
-      color: $third-color;
-      padding-bottom: 10px;
-      &:nth-child(odd) {
-        color: $sec-color;
-      }
+      font-size: 1.5rem;
+      padding-left: 0;
     }
   }
   h2 {
     line-height: 3rem;
   }
-  //burger
+
   #hero {
     nav {
       button {
-        display: none;
-      }
-      .toggle {
-        display: block;
+        margin: 20px;
       }
     }
   }
@@ -76,75 +69,6 @@
     li {
       &:nth-child(1) {
         justify-self: center;
-      }
-    }
-  }
-}
-@include mediaSm {
-  #hero nav h1 {
-    padding: 30px;
-  }
-  .content {
-    .words {
-      padding: 0;
-    }
-    .signup {
-      margin: 0;
-    }
-  }
-  .slidingVertical {
-    // text-align: center;
-    // span {
-    //   position: relative;
-    //   border-bottom: none;
-    //   animation: none;
-    //   display: block;
-    //   opacity: 1;
-    //   font-size: 2rem;
-    //   color: $third-color;
-    //   padding-bottom: 10px;
-    //   &:nth-child(odd) {
-    //     color: $sec-color;
-    //   }
-    // }
-  }
-  .how .box {
-    h4,
-    p {
-      width: 90%;
-    }
-  }
-  .why {
-    margin: 0 auto;
-    width: 90%;
-    .whyBox {
-      margin: 0;
-    }
-  }
-  footer {
-    ul li form {
-      input[type="text"] {
-        width: 250px;
-      }
-      input[type="submit"] {
-        padding: 10px;
-      }
-    }
-  }
-}
-
-@include mediaXSm {
-  .triangle {
-    left: 43%;
-  }
-  footer {
-    ul li {
-      p {
-        text-align: center;
-      }
-      p,
-      form {
-        margin: auto;
       }
       form {
         position: relative;
@@ -177,6 +101,53 @@
             @include easeOut;
           }
         }
+      }
+    }
+  }
+}
+@include mediaSm {
+  #hero nav h1 {
+    padding: 30px;
+  }
+  .content {
+    .words {
+      padding: 0;
+    }
+    .signup {
+      margin: 0;
+    }
+  }
+
+  .how .box {
+    h4,
+    p {
+      width: 90%;
+    }
+  }
+  .why {
+    margin: 0 auto;
+    width: 90%;
+    .whyBox {
+      margin: 0;
+    }
+  }
+}
+
+@include mediaXSm {
+  .triangle {
+    left: 43%;
+  }
+  .content form {
+    min-width: unset;
+  }
+  footer {
+    ul li {
+      p {
+        text-align: center;
+      }
+      p,
+      form {
+        margin: auto;
       }
     }
   }
