@@ -8,8 +8,13 @@ $fourth-color: #523a7a;
 }
 
 // Media Query Mixins
+@mixin mediaXSm {
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    @content;
+  }
+}
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 480px) {
     @content;
   }
 }

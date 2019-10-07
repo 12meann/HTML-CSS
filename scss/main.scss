@@ -27,6 +27,7 @@ li {
 h2 {
   font-size: 3rem;
   text-align: center;
+  line-height: 3rem;
 }
 .container {
   margin: 0 auto;
@@ -75,7 +76,7 @@ h2 {
   display: grid;
   grid-gap: 60px;
   grid-template-columns: 2fr 1fr;
-  margin: 0 auto;
+  margin: 20vh auto 0 auto;
   padding: 0 60px;
   .words {
     color: $sec-color;
