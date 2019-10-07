@@ -1,0 +1,40 @@
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  border-color: #090427 transparent transparent transparent;
+  position: relative;
+  top: 0;
+  left: 47%;
+  transform: rotate(50%, 50%);
+}
+
+.how {
+  margin-top: 200px;
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin: 60px;
+    img {
+      width: 200px;
+      border-radius: 50%;
+      padding: 40px;
+      background: $third-color;
+      display: block;
+      margin: 0 auto;
+    }
+    h4,
+    p {
+      text-align: center;
+      display: block;
+      margin: 20px auto;
+      width: 60%;
+      color: #333;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+}

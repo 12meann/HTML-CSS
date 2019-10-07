@@ -1,0 +1,12 @@
+@include mediaMd {
+  #hero {
+    nav {
+      button {
+        display: none;
+      }
+      .toggle {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+footer {
+  background: $fourth-color;
+  height: 100%;
+  color: $sec-color;
+  ul {
+    padding: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    // text-align: center;
+    li {
+      &:nth-child(1) {
+        padding: 10px;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        padding: 30px;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        float: left;
+        p {
+          padding-bottom: 20px;
+        }
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 0 10px;
+        &:hover {
+          cursor: pointer;
+          color: $third-color;
+          @include easeOut;
+        }
+      }
+      // input {
+      //   margin: 0;
+      //   height: 40px;
+      // }
+      // input[type="text"] {
+      //   border-radius: 10px 0 0 10px;
+      //   border-color: transparent;
+      //   width: 245px;
+      //   padding: 10px;
+      // }
+      // input[type="submit"] {
+      //   border-radius: 0 10px 10px 0;
+      //   padding: 10px 30px;
+      //   color: white;
+      //   outline: none;
+      //   background: $third-color;
+      //   border-color: transparent;
+      //   font-weight: 700;
+      //   font-size: 1rem;
+      //   text-transform: uppercase;
+      //   letter-spacing: 2px;
+      //   &:hover {
+      //     cursor: pointer;
+      //     background: #fabc35;
+      //     transition: all ease-out 0.3s;
+      //   }
+      // }
+      form {
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+        input[type="text"] {
+          height: 44px;
+          width: 100%;
+          padding-left: 20px;
+          line-height: 30px;
+          color: #ddd;
+          font-size: 16px;
+          border: none;
+          width: 245px;
+          padding: 10px;
+          border-radius: 10px 0 0 10px;
+        }
+        input[type="submit"] {
+          height: 44px;
+          position: absolute;
+          border-radius: 0 10px 10px 0;
+          padding: 10px 20px;
+          color: white;
+          outline: none;
+          background: $third-color;
+          border-color: transparent;
+          font-weight: 700;
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          &:hover {
+            cursor: pointer;
+            background: #fabc35;
+            transition: all ease-out 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

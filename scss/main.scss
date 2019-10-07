@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700");
+
+@import "config";
+@import "how";
+@import "why";
+@import "what";
+@import "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
+  color: $main-color;
+  letter-spacing: 2px;
+}
+li {
+  list-style: none;
+}
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+.container {
+  margin: 0 auto;
+}
+#hero {
+  background: url("../images/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+
+  nav {
+    h1 {
+      color: $sec-color;
+      padding: 30px 60px;
+      float: left;
+    }
+    button {
+      float: right;
+      margin: 30px 60px;
+      background: transparent;
+      padding: 10px 20px;
+      outline: none;
+      color: $sec-color;
+      letter-spacing: 2px;
+
+      &:hover {
+        cursor: pointer;
+        background: white;
+        color: $main-color;
+        @include easeOut;
+      }
+    }
+    .toggle {
+      text-align: right;
+      padding: 30px;
+      color: $sec-color;
+      font-size: 2rem;
+      display: none;
+    }
+  }
+}
+
+.content {
+  clear: both;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: 2fr 1fr;
+  margin: 0 auto;
+  padding: 0 60px;
+  .words {
+    color: $sec-color;
+    position: relative;
+  }
+  form {
+    min-width: 350px;
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 16px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    h3 {
+      background: #f8ad0c;
+      padding: 20px 0;
+      font-size: 140%;
+      font-weight: 300;
+      text-align: center;
+      color: #fff;
+      margin: -16px -16px 32px -16px;
+      border-radius: 10px 10px 0 0;
+    }
+    input[type="text"],
+    input[type="email"] {
+      outline: none;
+      width: 100%;
+      border-radius: 5px;
+      background: #fff;
+      margin-bottom: 6%;
+      border: 1px solid #ccc;
+      padding: 3%;
+      color: $main-color;
+      height: 2.5rem;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #f8ad0c;
+      border: none;
+      outline: none;
+      color: $sec-color;
+      border-radius: 5px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin: 10px 0;
+      &:hover {
+        cursor: pointer;
+        background: #523a7a;
+        @include easeOut;
+      }
+    }
+  }
+}
+
+//animate words
+.slidingVertical {
+  span {
+    margin-top: 25vh;
+    font-size: 3.25rem;
+    margin-left: 180px;
+    color: $third-color;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    border-bottom: $sec-color 2px solid;
+    display: block;
+    @include keyframes(topToBottom) {
+      0% {
+        opacity: 0.4;
+        transform: translateY(-100px);
+      }
+      5% {
+        opacity: 0.8;
+        transform: translateY(-75px);
+      }
+      10% {
+        opacity: 1;
+        transform: translateY(-50px);
+      }
+      25% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      30% {
+        opacity: 0;
+        // transform: translateY(100px);
+      }
+      80% {
+        opacity: 0;
+        // transform: translateY(150px);
+      }
+      100% {
+        opacity: 0;
+        // transform: translateY(180px);
+      }
+    }
+    @include animation(topToBottom 9s linear infinite 0s);
+
+    &:nth-child(2) {
+      animation-delay: 3s;
+      -ms-animation-delay: 3s;
+      -webkit-animation-delay: 3s;
+    }
+    &:nth-child(3) {
+      animation-delay: 6s;
+      -ms-animation-delay: 6s;
+      -webkit-animation-delay: 6s;
+    }
+  }
+}
+
+.active {
+  display: block;
+}
+
+@import "mobile";
